@@ -1,0 +1,8 @@
+{
+  "app": {
+    "name": "compute-deploy-example",
+    "framework": "hono",
+    "entry": "src/index.ts",
+    "httpPort": 8080
+  }
+}
