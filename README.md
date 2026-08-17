@@ -41,3 +41,25 @@ bun run dev
 
 Open [http://localhost:8080](http://localhost:8080). The JSON endpoint is
 available at [http://localhost:8080/api/users](http://localhost:8080/api/users).
+
+## Connect and deploy
+
+Connect this repository to a Prisma Compute project. Every push to the
+connected branch then builds and deploys automatically.
+
+```bash
+bun run compute:connect
+```
+
+After connecting, open the running service with:
+
+```bash
+bun run compute:open
+```
+
+Each push creates a build. To stream the full build log, copy the build ID
+from the GitHub check run and run:
+
+```bash
+npx -y @prisma/cli@next build logs <build-id>
+```
